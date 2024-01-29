@@ -14,7 +14,7 @@ function Header() {
       >
         <span className="rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-2 py-1 text-white">
           Rick's
-        </span>
+        </span>{" "}
         Blog
       </Link>
       <form>
