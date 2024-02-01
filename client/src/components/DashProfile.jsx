@@ -240,6 +240,7 @@ export default function DashProfile() {
               type="button"
               gradientDuoTone="purpleToPink"
               className="w-full"
+              disabled={loading || imageFileUploading}
             >
               Create a post
             </Button>
