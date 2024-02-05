@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CallToAction from "../components/CallToAction";
+import CommentSection from "../components/CommentSection";
 
 function PostPage() {
   const { postSlug } = useParams();
@@ -70,6 +71,7 @@ function PostPage() {
       <div className="mx-auto w-full max-w-4xl">
         <CallToAction />
       </div>
+      <CommentSection postId={post._id} />
     </main>
   );
 }

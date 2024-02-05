@@ -5,7 +5,6 @@ import {
   googleSignin,
   signout,
 } from "../controllers/auth.controller.js";
-import { verifyToken } from "../utils/verifyUser.js";
 
 const router = express.Router();
 
