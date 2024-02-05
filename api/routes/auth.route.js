@@ -4,7 +4,7 @@ import {
   signup,
   googleSignin,
   signout,
-} from "../controller/auth.controller.js";
+} from "../controllers/auth.controller.js";
 import { verifyToken } from "../utils/verifyUser.js";
 
 const router = express.Router();
