@@ -98,9 +98,10 @@ export const googleSignin = async (req, res, next) => {
         profilePicture: googlePhotoUrl,
       });
       await newUser.save();
-      const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
-        expiresIn: "15m",
-      });
+      const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET);
+      // const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
+      //   expiresIn: "15m",
+      // });
       const { password, ...rest } = newUser._doc;
       res
         .status(200)
