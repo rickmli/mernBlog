@@ -9,7 +9,7 @@ export const create = async (req, res, next) => {
     return next(errorHandler(400, "Please provide all required fields"));
 
   const slug = req.body.title
-    .split("")
+    .split(" ")
     .join("-")
     .toLowerCase()
     .replace(/[^a-zA-Z0-9]/g, "-");
