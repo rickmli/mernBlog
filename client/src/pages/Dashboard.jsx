@@ -3,6 +3,7 @@ import { useSearch } from "../hooks/useSearch";
 import DashSidebar from "../components/DashSidebar";
 import DashProfile from "../components/DashProfile";
 import DashPosts from "../components/DashPosts";
+import DashUsers from "../components/DashUsers";
 
 function Dashboard() {
   const [tab, setTab] = useState("");
@@ -25,6 +26,7 @@ function Dashboard() {
       {/* Profile */}
       {tab === "profile" && <DashProfile />}
       {tab === "posts" && <DashPosts />}
+      {tab === "users" && <DashUsers />}
     </div>
   );
 }
