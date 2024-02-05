@@ -72,10 +72,10 @@ export const googleSignin = async (req, res, next) => {
     if (user) {
       const token = jwt.sign(
         { id: user._id, isAdmin: user.isAdmin },
-        process.env.JWT_SECRET,
-        {
-          expiresIn: "15m",
-        }
+        process.env.JWT_SECRET
+        // {
+        //   expiresIn: "15m",
+        // }
       );
       const { password, ...rest } = user._doc;
       res
