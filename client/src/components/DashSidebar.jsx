@@ -73,7 +73,7 @@ function DashSidebar() {
                   icon={HiOutlineUserGroup}
                   as="div"
                 >
-                  Posts
+                  Users
                 </Sidebar.Item>
               </Link>
             </>
