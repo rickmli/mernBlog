@@ -8,7 +8,7 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 
-function FooterCom() {
+function FooterComp() {
   return (
     <Footer container className="border border-t-8 border-teal-500">
       <div className="mx-auto w-full max-w-7xl">
@@ -105,4 +105,4 @@ function FooterCom() {
   );
 }
 
-export default FooterCom;
+export default FooterComp;

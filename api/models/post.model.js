@@ -1,11 +1,8 @@
+import { defaultArticleImage } from "../utils/constants";
 import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema(
   {
-    userId: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
@@ -17,17 +14,37 @@ const postSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      default:
-        "https://cdn.shopify.com/s/files/1/0428/9455/7352/files/Pix_4_A01_render-min.jpg?v=1656512461",
+      default: defaultArticleImage,
     },
-    category: {
+    tags: [
+      {
+        type: String,
+        default: "untagged",
+      },
+    ],
+    status: {
       type: String,
-      default: "uncategorized",
+      default: "published",
     },
     slug: {
       type: String,
       required: true,
       unique: true,
+    },
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
+        default: [],
+      },
+    ],
+    likes: {
+      type: Number,
+      default: 0,
+    },
+    views: {
+      type: Number,
+      default: 0,
     },
   },
   { timestamps: true }
